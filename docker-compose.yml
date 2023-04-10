@@ -13,7 +13,7 @@ services:
             - SSL_CRT_FILE=/app/cert.pem
             - SSL_KEY_FILE=/app/prvkey.pem
             - PORT=443
-            - LINK=https://hedspi.dev:8889
+            - LINK=https://tungsnk.tech:8888
         networks:
             - network
     backendService:

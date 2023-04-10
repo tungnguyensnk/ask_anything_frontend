@@ -1,4 +1,4 @@
-let LINK = process.env.LINK || 'http://tungsnk.tech:8889';
+let LINK = process.env.LINK || 'https://tungsnk.tech:8888';
 const api = (url, method, body) => {
     let myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
