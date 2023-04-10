@@ -1,0 +1,14 @@
+.width_card {
+    width: 300px;
+    min-width: 300px !important;
+    height: 200px;
+    min-height: 200px;
+}
+
+.type_ok{
+    color: #00ff00;
+}
+
+.type_error{
+    color: #ff0000;
+}
