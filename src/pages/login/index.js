@@ -7,10 +7,9 @@ import dbService from "../../services/dbService";
 
 const Login = () => {
     let navigate = useNavigate();
-    let check = () => {
-        if (checkLogin().status === 'connected') {
+    let check = async () => {
+        if ((await checkLogin()).status === 'connected') {
             info().then((userInfo) => {
-
                 setUser({
                     src: userInfo.picture.data.url,
                     email: userInfo.email,
@@ -23,7 +22,9 @@ const Login = () => {
     }
     let [user, setUser] = useState(undefined);
     useEffect(() => {
-        check();
+        (async () => {
+            await check();
+        })();
     }, []);
 
     (async () => {

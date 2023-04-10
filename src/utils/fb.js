@@ -22,9 +22,11 @@ const login = () => {
 const saveUser = (user) => {
     localStorage.setItem('user', JSON.stringify(user));
 }
-const checkLogin = () => {
+const checkLogin = async () => {
+    if (window.FB === undefined)
+        await init();
     let kq = {};
-    window.FB.getLoginStatus(function (response) {
+    window.FB?.getLoginStatus(function (response) {
         kq = response;
     });
     // connected: Logged into your webpage and Facebook.

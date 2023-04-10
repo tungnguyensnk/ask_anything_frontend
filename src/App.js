@@ -1,6 +1,7 @@
-import React from "react";
-import {Routes, Route, BrowserRouter} from "react-router-dom";
+import React, {useEffect} from "react";
+import {Routes, Route, BrowserRouter, Router} from "react-router-dom";
 import {AppRoutes} from "./routes/routes";
+import {init} from "./utils/fb";
 
 function App() {
     return (
